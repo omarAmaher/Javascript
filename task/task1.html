@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>session 1 JS</title>
+    </head>
+    <body>
+        <input type="number" id="number1">
+        <input type="number" id="number2"><br><br>
+        <button id="sum" onClick="sum()">Sum</button>
+        <button id="sub" onClick="sub()">Sub</button><br>
+        <button id="divide" onClick="div()">div</button>
+        <button id="mult" onClick="mult()">mul</button> 
+        
+        <h3>Result: <span id="result">0</span></h3>
+        
+        <script>
+            function sum() {
+                var num1 = parseFloat(document.getElementById('number1').value),
+                    num2 = parseFloat(document.getElementById('number2').value),
+                    sum = num1 + num2,
+                    result = document.getElementById('result');
+
+                result.innerText = sum;
+            }
+            function sub() {
+                var num1 = parseFloat(document.getElementById('number1').value),
+                    num2 = parseFloat(document.getElementById('number2').value),
+                    sub = num2 - num1 ,
+                    result = document.getElementById('result');
+
+                result.innerText = sub;
+            }
+            function div() {
+                var num1 = parseFloat(document.getElementById('number1').value),
+                    num2 = parseFloat(document.getElementById('number2').value),
+                    divide = num2 / num1 ,
+                    result = document.getElementById('result');
+
+                result.innerText = divide;
+            }
+            function mult() {
+                var num1 = parseFloat(document.getElementById('number1').value),
+                    num2 = parseFloat(document.getElementById('number2').value),
+                    mult = num1 * num2,
+                    result = document.getElementById('result');
+
+                result.innerText = mult;
+            }
+            function all() {
+            var num1 = parseFloat(document.getElementById('number1').value),
+                num2 = parseFloat(document.getElementById('number2').value),
+                sum = num1 + num2,
+                minus = num2 - num1 ,
+                divide = num2 / num1,
+                multiply = num1 * num2,
+                result = document.getElementById('result');
+
+              result.innerHTML  = sum , sub, div, mult;
+        }
+        </script>
+    </body>
+</html>
